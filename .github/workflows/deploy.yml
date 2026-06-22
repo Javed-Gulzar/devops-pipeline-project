@@ -29,5 +29,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/ubuntu/app
-            sudo docker compose down || true
-            sudo docker compose up --build -d
+            sudo docker-compose down || true
+            sudo docker-compose up --build -d
