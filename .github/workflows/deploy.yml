@@ -18,7 +18,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "index.js,package.json,package-lock.json,Dockerfile,docker-compose.yml"
+          source: "index.js,package.json,package-lock.json,Dockerfile,docker-compose.yml,nginx/"
           target: "/home/ubuntu/app"
 
       - name: Deploy on server
