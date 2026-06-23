@@ -21,14 +21,21 @@ services:
       - "9090:9090"
     volumes:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
     restart: always
 
   grafana:
     image: grafana/grafana:latest
     ports:
       - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
     restart: always
 
   node-exporter:
     image: prom/node-exporter:latest
     restart: always
+
+volumes:
+  prometheus_data:
+  grafana_data:
