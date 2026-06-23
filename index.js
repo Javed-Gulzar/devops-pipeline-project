@@ -15,6 +15,11 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
 
+app.get('/metrics', (req, res) => {
+  res.set('Content-Type', 'text/plain');
+  res.send('app_up 1\napp_requests_total 0\n');
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
