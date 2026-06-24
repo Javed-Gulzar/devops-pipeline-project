@@ -4,7 +4,7 @@ const PORT = 3000;
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'DevOps javed Pipeline Project v3 - Running!',
+    message: 'DevOps Pipeline Project - Running!',
     status: 'healthy',
     version: '1.0.0',
     timestamp: new Date().toISOString()
